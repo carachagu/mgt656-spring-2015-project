@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block mainContent %}
+      
+   {% if errors %}
+    <div class="form-errors">
+      <p>Please enter a valid email address!</p>
+      <ul>
+        {% for error in errors %}
+          <li>{{error}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+  
+      <h1> {{event.title}} </h1>
+      <span>
+      <img src = {{event.image}}>
+      <br> 
+      {{event.location}}
+      <time datetime="{{event.date}}">{{event.date|prettyDate}}</time>
+      <br>
+      {{event.attending.length}} attending so far.
+      {{event.attending}}
+      </span>
+  
+    <form id="rsvp" method="POST">
+    <label for="email">Email address:</label>
+    <input type="text" name="email">
+    <br>
+    <input id = "rsvp" type = "submit">
+    </form>
+      
+{% endblock %}
+
+
