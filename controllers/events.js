@@ -69,7 +69,7 @@ function saveEvent(request, response){
     contextData.errors.push('Your image is invalid.');
   }
 
-  if (request.body.image.substring(request.body.image.length-3) != "gif" || request.body.image.substring(request.body.image.length-3) != "png") {
+  if (request.body.image.substring(request.body.image.length-3) !== 'gif' && request.body.image.substring(request.body.image.length-3) !== 'png') {
     contextData.errors.push('Your image should either be gif or png');
   }
   
@@ -101,20 +101,21 @@ function saveEvent(request, response){
     contextData.errors.push('Your hour should be an integer');
   }
   
-  if (request.body.day < 0 || request.body.day > 23) {
+  if (request.body.hour < 0 || request.body.hour > 23) {
     contextData.errors.push('Your hour is invalid');
   }
 
   if (contextData.errors.length === 0) {
     var newEvent = {
+      id: events.all.length,
       title: request.body.title,
       location: request.body.location,
       image: request.body.image,
-      date: new Date(),
+      date: new Date(request.body.year, request.body.month, request.body.day, request.body.hour, request.body.minute, 0),
       attending: []
     };
     events.all.push(newEvent);
-    response.redirect('/events');
+    response.redirect('/events/' + newEvent.id);
   }else{
     response.render('create-event.html', contextData);
   }
@@ -134,7 +135,7 @@ function rsvp (request, response){
     response.status(404).send('No such event');
   }
 
-  if(validator.isEmail(request.body.email)){
+  if(validator.isEmail(request.body.email) === true && request.body.email.toLowerCase().indexOf('yale.edu') !== -1) {
     ev.attending.push(request.body.email);
     response.redirect('/events/' + ev.id);
   }else{
