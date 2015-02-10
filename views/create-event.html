@@ -14,42 +14,44 @@
   {% endif %}
 
 	<form id="create-event" method="POST">
-    <label for="title">Event title:</label>
+    <label for="title">Event Title:</label>
     <input type="text" name="title">
     
     <br>
-     <label for="location">Event location:</label>
+     <label for="location">Event Location:</label>
     <input type="text" name="location">
 
     <br>
-     <label for="image">Event image:</label>
+     <label for="image">Event image (png or gif URL):</label>
     <input type="text" name="image">
    
    <br> 
-     <label for="year">Event year:</label>
+     <label for="year">Event year (YYYY):</label>
     <input type="text" name="year">
   
     <br>
-     <label for="month">Event month:</label>
+     <label for="month">Event month (MM):</label>
     <input type="text" name="month">
     
     <br>
-     <label for="day">Event day:</label>
+     <label for="day">Event day (DD):</label>
     <input type="text" name="day">
     
     <br>
-     <label for="hour">Event hour:</label>
+     <label for="hour">Event hour (HH from 0-24):</label>
     <input type="text" name="hour">
     
     <br>
-     <label for="minute">Event minute:</label>
+     <label for="minute">Event minute (MM from 0-60):</label>
     <input type="text" name="minute">
     
+    <p></p>
+    
+    <p> Note: Do not enter leading zeros when inputting data </p>
     <br>
     <br>
     <input type = "submit">
     <!-- title, location, image, year, month, day, hour, and minute-->
+  
   </form>
 {% endblock %}
-
-
