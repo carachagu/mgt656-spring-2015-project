@@ -163,6 +163,16 @@ function api(request, response){
   response.json(output);
 }
 
+function donate(request, response) {
+          var contextData = {};
+          response.render('donate.html', contextData); 
+}
+
+function report(request, response) {
+          var contextData = {};
+          response.render('report.html', contextData); 
+}
+
 /**
  * Export all our functions (controllers in this case, because they
  * handles requests and render responses).
@@ -173,5 +183,7 @@ module.exports = {
   'newEvent': newEvent,
   'saveEvent': saveEvent,
   'rsvp': rsvp,
-  'api': api
+  'api': api,
+  'donate': donate,
+  'report': report
 };
