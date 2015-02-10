@@ -168,9 +168,9 @@ function donate(request, response) {
           response.render('donate.html', contextData); 
 }
 
-function report(request, response) {
+function report1(request, response) {
           var contextData = {};
-          response.render('report.html', contextData); 
+          response.render('report1.html', contextData); 
 }
 
 /**
@@ -185,5 +185,5 @@ module.exports = {
   'rsvp': rsvp,
   'api': api,
   'donate': donate,
-  'report': report
+  'report1': report1
 };
