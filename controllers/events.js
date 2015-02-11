@@ -173,6 +173,11 @@ function report1(request, response) {
           response.render('report1.html', contextData); 
 }
 
+function report2(request, response) {
+          var contextData = {};
+          response.render('report2.html', contextData); 
+}
+
 /**
  * Export all our functions (controllers in this case, because they
  * handles requests and render responses).
@@ -185,5 +190,6 @@ module.exports = {
   'rsvp': rsvp,
   'api': api,
   'donate': donate,
-  'report1': report1
+  'report1': report1,
+  'report2': report2
 };
