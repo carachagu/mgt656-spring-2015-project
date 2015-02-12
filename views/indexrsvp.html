@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  <header>
+    <img id="HeaderPhoto" src="http://www.zenthemaster.in/images/header-bg.png" height="150" width="1150">
+    <h1>{{ title }} CARACHUGU</h1>
+  </header>
+{% endblock %}
+
+{% block mainContent %}
+  <p>
+    Welcome to {{ title }}. {{tagline}}
+  </p>
+  <img id="logo" src="http://i.kinja-img.com/gawker-media/image/upload/s--KfWpVfF9--/777799945904752783.png" width="1150">
+  <p>Here is our list of events</p>
+  <div style="border: 1px solid black">
+     {% include "fragments/events-list-rsvp.html" %}
+  </div>
+  <p>
+    Check out the <a href="/about">About us</a> page
+    as well as the <a href="/events">Events</a> page.
+  </p>
+  <p>
+    <a id="new" href="/events/new">Create a new event</a>
+  </p>
+  
+  <p>Here are our sprint reports:</p>
+  
+  <div style="border: 1px solid blue">
+  <p> 
+  <a href="/reports1" >Sprint 1 Report</a>
+  </p>
+   <p> 
+  <a href="/reports2" >Sprint 2 Report</a>
+  </p>
+  </div>
+  
+{% endblock %}
