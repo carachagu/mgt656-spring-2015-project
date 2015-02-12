@@ -8,6 +8,7 @@ var configure = require('./config.js');
 var indexControllers = require('./controllers/index.js');
 var aboutControllers = require('./controllers/about.js');
 var eventControllers = require('./controllers/events.js');
+var alternateControllers = require('./controllers/indexrsvp.js');
 
 
 // Create our express app
@@ -18,6 +19,7 @@ configure(app);
 
 // Add routes mapping URLs to controllers
 app.get('/', indexControllers.index);
+app.get('/alternate', alternateControllers.indexrsvp);
 app.get('/about', aboutControllers.about);
 app.get('/events', eventControllers.listEvents);
 app.get('/events/new', eventControllers.newEvent);
