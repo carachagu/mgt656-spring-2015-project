@@ -18,7 +18,10 @@ function index (request, response) {
     contextData.events.push(event);
   }
   }
-  response.render('index.html', contextData);
+  
+contextData.rsvp = true;    
+
+response.render('index.html', contextData);
 }
 
 module.exports = {
