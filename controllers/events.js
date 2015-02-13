@@ -126,7 +126,12 @@ function eventDetail (request, response) {
   if (ev === null) {
     response.status(404).send('No such event');
   }
-  response.render('event-detail.html', {event: ev});
+ var contextData = {event: ev};
+  if (Math.random() < 0.5) {
+      contextData.donate = true;    
+    }else{
+      contextData.donate = false;
+  }  response.render('event-detail.html', contextData);
 }
 
 function rsvp (request, response){
