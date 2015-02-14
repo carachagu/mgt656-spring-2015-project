@@ -19,7 +19,11 @@ function index (request, response) {
   }
   }
   
-contextData.rsvp = true;    
+if (Math.random() < 0.5) {
+      contextData.rsvp = true;    
+    }else{
+      contextData.rsvp = false;
+  }
 
 response.render('index.html', contextData);
 }
