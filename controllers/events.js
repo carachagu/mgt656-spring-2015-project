@@ -127,11 +127,8 @@ function eventDetail (request, response) {
     response.status(404).send('No such event');
   }
  var contextData = {event: ev};
-  if (Math.random() < 0.5) {
-      contextData.donate = true;    
-    }else{
-      contextData.donate = false;
-  }  response.render('event-detail.html', contextData);
+ contextData.donate = true;    
+  response.render('event-detail.html', contextData);
 }
 
 function rsvp (request, response){
