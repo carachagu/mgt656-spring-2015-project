@@ -7,31 +7,12 @@
   </header>
 {% endblock %}
 
-<!-- Load the Content Experiment JavaScript API client for the experiment -->
-<script src="//www.google-analytics.com/cx/api.js?experiment=iFc3l3nyQnSxQrfdxQ9Xjw"></script>
+<script> 
 
-<script>
-  // Ask Google Analytics which variation to show the user.
-  var chosenVariation = cxApi.chooseVariation();
-</script>
+ga('set', 'expId', 'iFc3l3nyQnSxQrfdxQ9Xjw'); 
+{% if rsvp %} ga('set', 'expVar', '0') {% else %} ga('set', 'expVar', '1') {% endif %}
+ga('send', 'pageview');
 
-<!-- Load the JQuery library -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-
-<script>
-// Define JavaScript for each page variation of this experiment.
-var pageVariations = [
-  function() {},  // Original: Do nothing. This will render the default HTML - with RSVP in event link
-  function() {    // Variation 1: Without RSVP in event link
-    rsvp = false;
-  }
-];
-
-// Wait for the DOM to load, then execute the view for the chosen variation.
-$(document).ready(
-  // Execute the chosen view
-  pageVariations[chosenVariation]
-);
 </script>
 
 {% block mainContent %}

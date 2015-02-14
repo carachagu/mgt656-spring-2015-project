@@ -1,30 +1,11 @@
 {% extends "layout.html" %}
 
-<!-- Load the Content Experiment JavaScript API client for the experiment -->
-<script src="//www.google-analytics.com/cx/api.js?experiment=cUmAgWyWQS2kncis5SZQ6w"></script>
+<script> 
 
-<script>
-  // Ask Google Analytics which variation to show the user.
-  var chosenVariation = cxApi.chooseVariation();
-</script>
+ga('set', 'expId', 'cUmAgWyWQS2kncis5SZQ6w'); 
+{% if donate %} ga('set', 'expVar', '0') {% else %} ga('set', 'expVar', '1') {% endif %}
+ga('send', 'pageview');
 
-<!-- Load the JQuery library -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-
-<script>
-// Define JavaScript for each page variation of this experiment.
-var pageVariations = [
-  function() {},  // Original: Do nothing. This will render the default HTML.
-  function() {    // Variation 1: Support link
-    donate = false;
-  }
-];
-
-// Wait for the DOM to load, then execute the view for the chosen variation.
-$(document).ready(
-  // Execute the chosen view
-  pageVariations[chosenVariation]
-);
 </script>
 
 {% block mainContent %}
