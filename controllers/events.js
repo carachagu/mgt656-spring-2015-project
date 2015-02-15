@@ -34,10 +34,19 @@ var allowedDateInfo = {
  */
 function listEvents(request, response) {
   var currentTime = new Date();
+  var now = new Date();
   var contextData = {
-    'events': events.all,
+    'events': [],
     'time': currentTime
   };
+
+  for(var i = 0; i<events.all.length; i++){
+  var event = events.all[i];
+  if(event.date > now){
+    contextData.events.push(event);
+  }
+  }
+  
   response.render('event.html', contextData);
 }
 
