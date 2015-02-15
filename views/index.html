@@ -17,15 +17,12 @@
   ga('create', 'UA-59594244-1', 'auto');
   ga('set', 'expId', 'iFc3l3nyQnSxQrfdxQ9Xjw'); 
 
-var variation_id = 1;
-if (rsvp) {
-      variation_id = 0;   
+  if (rsvp) {
+       ga('set', 'expVar', '0');   
     }else{
-      variation_id = 1;   
+       ga('set', 'expVar', '1');    
   }
-
-  ga('set', 'expVar', variation_id);
-
+  
   ga('send', 'pageview');
 
 </script>

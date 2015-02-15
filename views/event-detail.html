@@ -10,14 +10,12 @@
   ga('create', 'UA-59594244-1', 'auto');
   ga('set', 'expId', 'cUmAgWyWQS2kncis5SZQ6w'); 
 
-var variation_id_d = 1;
-if (donate) {
-      variation_id_d = 0;   
+  if (donate) {
+       ga('set', 'expVar', '0');   
     }else{
-      variation_id_d = 1;   
+       ga('set', 'expVar', '1');    
   }
 
-  ga('set', 'expVar', variation_id_d);
   ga('send', 'pageview');
 
 </script>
