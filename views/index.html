@@ -17,11 +17,11 @@
   ga('create', 'UA-59594244-1', 'auto');
   ga('set', 'expId', 'iFc3l3nyQnSxQrfdxQ9Xjw'); 
 
-  if (rsvp) {
-       ga('set', 'expVar', '0');   
-    }else{
-       ga('set', 'expVar', '1');    
-  }
+  {% if rsvp %}
+       ga('set', 'expVar', '0');  
+  {% else %}
+       ga('set', 'expVar', '1');
+  {% endif %}
   
   ga('send', 'pageview');
 

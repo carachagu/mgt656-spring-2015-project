@@ -10,11 +10,11 @@
   ga('create', 'UA-59594244-1', 'auto');
   ga('set', 'expId', 'cUmAgWyWQS2kncis5SZQ6w'); 
 
-  if (donate) {
-       ga('set', 'expVar', '0');   
-    }else{
-       ga('set', 'expVar', '1');    
-  }
+  {% if donate %}
+       ga('set', 'expVar', '0');  
+  {% else %}
+       ga('set', 'expVar', '1');
+  {% endif %}
 
   ga('send', 'pageview');
 
