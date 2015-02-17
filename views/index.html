@@ -24,6 +24,16 @@
   {% endif %}
   
   ga('send', 'pageview');
+  
+  ga('set', 'expId', '5tcLAU0bTf2kGIE-f4NnIA'); 
+
+  {% if rsvp %}
+       ga('set', 'expVar', '0');  
+  {% else %}
+       ga('set', 'expVar', '1');
+  {% endif %}
+  
+  ga('send', 'pageview');
 
 </script>
 </head>
