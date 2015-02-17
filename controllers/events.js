@@ -141,6 +141,7 @@ function eventDetail (request, response) {
     }else{
       contextData.donate = false;
     }
+   contextData.experiment = false; 
   response.render('event-detail.html', contextData);
 }
 

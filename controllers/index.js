@@ -25,6 +25,7 @@ if (Math.random() < 0.5) {
       contextData.rsvp = false;
   }
 
+contextData.experiment = true;
 response.render('index.html', contextData);
 }
 
