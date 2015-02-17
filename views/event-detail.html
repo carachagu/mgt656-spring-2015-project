@@ -18,6 +18,16 @@
 
   ga('send', 'pageview');
 
+  ga('set', 'expId', 'qOVLipbhRkaQGPwqu0nD4w'); 
+
+  {% if donate %}
+       ga('set', 'expVar', '0');  
+  {% else %}
+       ga('set', 'expVar', '1');
+  {% endif %}
+
+  ga('send', 'pageview');
+
 </script>
 </head>
 
