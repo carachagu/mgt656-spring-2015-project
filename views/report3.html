@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<head>
+  <title>Carachugu</title>
+  <style>
+    body {
+      text-align: center;
+      background-position: center;
+      color: white;
+      font-family: helvetica;
+    }
+div {
+text-align: left;
+color: gray;
+font-size: 16px;
+}
+    p {
+      font-size: 12px;
+text-align: right;
+    }
+p2 {
+vertical-align: middle;
+}
+header {
+  background-image: url('https://googledrive.com/host/0BzGVODd1F-I_NmxxT2hUbU9na1U/Snow-3.png');
+      background-size: cover;
+      background-position: center;
+}
+h2 { padding: 10px;
+background: gray;
+font-size: 16px;
+}
+h3 { padding: 10px;
+background: gray;
+font-size: 16px;
+}
+h5 { padding: 10px;
+background: gray;
+font-size: 16px;
+}
+h6 { padding: 10px;
+background: gray;
+font-size: 16px;
+}
+img {
+      margin: 0px 20px 0px 0px;
+      border: 7px solid gray;
+      border-radius: 20px;
+max-height:100% max-width:100%;
+    }
+ul {
+list-style: outside disc;
+list-style-type: none;
+list-style-position: inside;
+margin-left: 3em;
+}
+ul li {
+left: 1em;
+padding-right: 3em;
+}
+.left { float: left; margin-left: 0em; }
+  </style>
+</head>
+
+<body>
+<header> <h1>We are Carachugu: the Ninja code-founders. We survived!
+<h4> Sprint-3: February 18, 2015 </h4>
+  <p>Cachapero, Mija (mija-darlene.cachapero@yale.edu)</p>
+  <p>Rahemtulla, Alisha (alisha.rahemtulla@yale.edu)</p>
+  <p>Chan, Joey (singyuen.chan@yale.edu)</p>
+  <p>Guo, James (jinshuai.guo@yale.edu)</p>
+</h1>
+</header>
+<h2> Completed Stories </h2> 
+<div>
+<img border="0" src="https://googledrive.com/host/0BzGVODd1F-I_NmxxT2hUbU9na1U/BurnDown3-2.PNG" style="float: left; width: 45.7%; margin-right: 3%; margin-bottom: 0.5em;">
+<img border="0" src="https://googledrive.com/host/0BzGVODd1F-I_NmxxT2hUbU9na1U/BurnUp3.PNG" style="float: left; width: 45.7%; margin-right: 3%; margin-bottom: 0.5em;">
+
+<div>
+  <ul padding: 10px 20px 0px 8px>
+<li> 1.	Formatted Website Header </li>
+<li> 2. Created donate button and landing page </li>
+<li> 3. Configured Google Analytics to fetch base data </li>
+<li> 4. Configured RSVP experiment - with or without RSVP in event links  </li>
+<li> 5.	Configured Donate experiment - with donate button or with support button  </li>
+<li> 6.	Gathered and analyzed analytics data </li>
+<li> 7.	Converted month, hour and minute in new event creation to be in the form of drop-down selections </li>
+
+</ul>
+<br>
+</div>
+<p1> 
+Sprint 3 served as a wrap-up of the project for the Carachugu Ninjas. As the team completed and passed all 41 mocha tests during sprint 2, we decided to focus our effort on the ‘curveballs’ and fine-tuning the design of our website.
+
+Among the ‘curveballs,’ the team had a difficult time getting the experiments to work. We did server-side implementation and wrote a code within our controllers to randomly show either variation 1 or variation 2 of the experiments. This was working perfectly since we saw the "RSVP" in the event links alternately be shown in a random fashion. The donate link also alternately showed the words "DONATE" and "SUPPORT".
+
+However, the experiments in Google Analytics were not getting the experiment data. We tried so many things and also got stuck along the way. This led to us being delayed all throughout the sprint as can be seen in our burndown chart. 
+
+Moreover, we thought we will finish this curveball sprint in 6 days but we ended up needing 8 days to complete. 
+
+We then explored Google Analytics and broke down the results by 1) breakdown per referrer; 2) a general donate statistic w/o experiments; 3) if putting RSVP or donate makes people donate more.
+</p1>
+
+<br clear=all>
+</div>
+<h3> Product Backlog </h3>
+<div>
+<ul class="left">
+<li> 1.	Explore the multi-arm bandit experiments in Google Analytics and evaluate if it can be used for our project </li>
+<li> 2. Make our website design look more modern and sophisticated =) </li>
+<br clear=all>
+<p style="clear: both;">
+</ul>
+<p2> It would be wonderful if we could learn how to use the multi-arm bandit experiments to be able to understand user behavior better in order to influence and increase the probability of them donating.
+If we were or if we could hire graphic designers, we could revamp the look and feel of our event website.
+</p2>
+</div>
+
+<h6> Analytics </h6>
+<div> 
+
+</div>
+<h5> Retrospective </h5>
+<div> 
+<ul> 
+<li> <p3> <b> Start doing: </b> making the scrum master a full-time role <br> 
+Currently, the team relies on one group member for technical support. While the team member is an outstanding asset to the team, she inevitably takes a heavier workload. Moving forward, we should set aside the position of a scrum master to avoid overburdening the technical person.
+</p3>
+</li>
+<br>
+<li>
+<p3>
+<b> Stop doing:</b> clearing all the user stories in the initial stage <br>
+The team finished all the user stories and passed all the mocha tests at the end of sprint 2. While this allows sufficient time for the team to deal with the curveballs, we can perhaps go with a more distributed workload across time.
+</p3>
+</li>
+<br>
+<li>
+<p3> <b> Continue doing: </b>update each other on unexpected delays via email <br>
+The team just evolved in a way that team members are very good with communicating each other about unexpected delays via emails. This way, the team can adjust and re-estimate work progress before the sprint meeting and take corresponding actions. Moving forward, we should continue this practice to avoid a huge project backlog. 
+</p3>
+</li>
+</ul>
+<p3> Go Carachugu!! It has truly been a great learning experience for the team. <br> We are amazed by how much we have learned in 6 weeks, from learning html to setting up AB testing! (Even we pulled some of our hair because of the curveball!)
+</p3>
+</div>
+</body>
